@@ -287,4 +287,24 @@ if game.Players.LocalPlayer.UserId == 0 then
 game.Players.LocalPlayer:Kick("Blacklisted | Please DM KaiW#4990 or FrostyW#9330 for help, If neither of them respond join our discord: .gg/C2eTqjK9dp")
 end
 
+if game.Players.LocalPlayer.UserId == 666447670 then
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+	Title = "Main Account";
+	Text = "Why are you on your main?";
+	Duration = 15;
+})
+end
+
+if game.Players.LocalPlayer.UserId == 243176664 then
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+	Title = "Alt Account";
+	Text = "Have fun Snow 😝😋";
+	Duration = 15;
+})
+end
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/PickleIsDaBest/Min/main/Skript"))()
