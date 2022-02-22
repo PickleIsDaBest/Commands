@@ -2,12 +2,10 @@ getgenv().Prefix = ":"
 
 getgenv().Operator = 
 {
-666447670,
-903327775,
-2003508283,
-1607571434,
-3171529598,
-1001587711,
+666447670, --Snow
+903327775, --Hax0963
+2003508283, --Saturn
+1001587711, --Barbieeee
 }
 getgenv().Droppers = game.Players.LocalPlayer
 
