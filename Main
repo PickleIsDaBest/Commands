@@ -1,3 +1,5 @@
+--Booting up my pc
+
 getgenv().Prefix = ":"
 
 getgenv().Operator = 
