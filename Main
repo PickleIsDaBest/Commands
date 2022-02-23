@@ -309,4 +309,14 @@ CoreGui:SetCore("SendNotification", {
 })
 end
 
+if game.Players.LocalPlayer.UserId == 3222362538 then
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+	Title = "Alt Account";
+	Text = "Have fun Snow 😝😋";
+	Duration = 15;
+})
+end
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/PickleIsDaBest/Min/main/Skript"))()
