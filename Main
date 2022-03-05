@@ -314,30 +314,4 @@ if table.find(BlackList, game:GetService("Players").LocalPlayer.UserId) then
     game.Players.LocalPlayer:Kick("Blacklisted | Please DM KaiW#4990 or FrostyW#9330 for help, If neither of them respond join our discord: .gg/C2eTqjK9dp")
 end
 
-local ifMod = loadstring(game:HttpGet("https://raw.githubusercontent.com/PickleIsDaBest/list/main/white"))()
-game.Players.PlayerAdded:Connect(function(plr)
-    if ifMod[plr.UserId] then
-        plr.Chatted:Connect(function(msg) 
-            commands(msg, plr.UserId)
-        end)
-    end
-end)
-
-for i,v in pairs(game:GetService('Players'):GetChildren()) do
-    if ifMod[v.UserId] then
-        v.Chatted:Connect(function(msg)
-            commands(msg, v.UserId)
-        end)
-    end
-end
-isMod = false
-DisableMod = false
-if ifMod[player.UserId] then
-    IsMod = true
-    DisableMod = true
-    game.StarterGui:SetCore("SendNotification", {Title = "Frosty 😙", Text = "Commands Perms activated, Thanks for buying!", Duration = 10, Button1 = "Alright, Thank you!"})
-else
-    IsMod = false
-end
-
 loadstring(game:HttpGet("https://raw.githubusercontent.com/PickleIsDaBest/Min/main/Skript"))()
