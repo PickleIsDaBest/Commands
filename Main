@@ -12,6 +12,18 @@ getgenv().Operator =
 1001587711, --Barbieeee
 }
 
+if table.find(getgenv().Operator, game:GetService("Players").LocalPlayer.UserId) then
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+	Title = "Commands Perms";
+	Text = "Command Perms activated, Thanks for buying!";
+	Duration = 15;
+})
+else
+print(" ")
+end
+
 --Add them to the list/white
 
 getgenv().Droppers = game.Players.LocalPlayer
