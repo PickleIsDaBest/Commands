@@ -10,6 +10,7 @@ getgenv().Operator =
 903327775, --Hax0963
 2003508283, --Saturn
 1001587711, --Barbieeee
+243177181, --Troy
 }
 
 if table.find(getgenv().Operator, game:GetService("Players").LocalPlayer.UserId) then
