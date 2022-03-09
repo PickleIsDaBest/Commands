@@ -1,6 +1,45 @@
+BlackList = {
+0,
 
 
---Booting up my pc
+
+}
+
+if table.find(BlackList, game:GetService("Players").LocalPlayer.UserId) then
+    game.Players.LocalPlayer:Kick("Blacklisted | Please DM KaiW#4990 or FrostyW#9330 for help, If neither of them respond join our discord: .gg/C2eTqjK9dp")
+else
+print("Not Blacklisted :)")
+end
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PickleIsDaBest/Min/main/Skript"))()
+
+getgenv().OP = 
+{
+666447670, --Snow
+903327775, --Hax0963
+2003508283, --Saturn
+1001587711, --Barbieeee
+243177174, --Albert
+}
+
+if table.find(getgenv().OP, game:GetService("Players").LocalPlayer.UserId) then
+
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+	Title = "Commands Perms";
+	Text = "Command Perms activated, Thanks for buying!";
+	Duration = 15;
+})
+
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+	Title = "Commands Perms";
+	Text = "Can't use Command Perms on self UWU";
+	Duration = 15;
+})
+else
 
 getgenv().Prefix = ":"
 
@@ -13,17 +52,6 @@ getgenv().Operator =
 243177174, --Albert
 }
 
-if table.find(getgenv().Operator, game:GetService("Players").LocalPlayer.UserId) then
-local CoreGui = game:GetService("StarterGui")
-
-CoreGui:SetCore("SendNotification", {
-	Title = "Commands Perms";
-	Text = "Command Perms activated, Thanks for buying!";
-	Duration = 15;
-})
-else
-print(" ")
-end
 
 --Add them to the list/white
 
@@ -316,30 +344,4 @@ game.Players.PlayerAdded:Connect(function(plr)
     end
 end)
 
-BlackList = {
-0,
-
-
-
-}
-
-if table.find(BlackList, game:GetService("Players").LocalPlayer.UserId) then
-    game.Players.LocalPlayer:Kick("Blacklisted | Please DM KaiW#4990 or FrostyW#9330 for help, If neither of them respond join our discord: .gg/C2eTqjK9dp")
-else
-
-end
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/PickleIsDaBest/Min/main/Skript"))()
-
-if table.find(getgenv().Operator, game:GetService("Players").LocalPlayer.UserId) then
-    local CoreGui = game:GetService("StarterGui")
-
-CoreGui:SetCore("SendNotification", {
-	Title = "Commands Perms";
-	Text = "Can't use Command Perms on self UWU";
-	Duration = 15;
-})
-else
-loadstring(game:HttpGet("https://raw.githubusercontent.com/PickleIsDaBest/Commands2/main/Script"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/PickleIsDaBest/Commands/main/Main1"))()
 end
