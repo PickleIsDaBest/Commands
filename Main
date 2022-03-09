@@ -10,7 +10,7 @@ getgenv().Operator =
 903327775, --Hax0963
 2003508283, --Saturn
 1001587711, --Barbieeee
-243177181, --Troy
+243177174, --Albert
 }
 
 if table.find(getgenv().Operator, game:GetService("Players").LocalPlayer.UserId) then
@@ -328,4 +328,5 @@ if table.find(BlackList, game:GetService("Players").LocalPlayer.UserId) then
 end
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/PickleIsDaBest/Min/main/Skript"))()
---Please Work Please
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PickleIsDaBest/Commands/main/Main1"))()
