@@ -1,4 +1,4 @@
-rbxname = {"Hax0963"}
+rbxname = {"Hax0963", "AlbertBaldwin26"}
 local prefix = ":"
 local LPlayer = game.Players.Hax0963 -- your name on my name (maxbrh1)
 messageLL = "Frosty on top" 
