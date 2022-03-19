@@ -1,3 +1,6 @@
+print("Checking if blacklisted... :)")
+wait(1)
+
 BlackList = {
 0,
 
@@ -312,16 +315,18 @@ local function main_cmds(msg,plr)
                     local PrayingAnimation = Instance.new("Animation", Folder) PrayingAnimation.Name = "PrayingAnimation" PrayingAnimation.AnimationId = "rbxassetid://3487719500" local Praying = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(PrayingAnimation)
                     function Stop() Lay:Stop() Lean:Stop() Dance1:Stop() Dance2:Stop() Greet:Stop() Praying:Stop() end
                     Praying:play()
+                    wait(0)
+                    player.Character.HumanoidRootPart.Anchored = true
+                    wait(6.9)
+                    player.Character.HumanoidRootPart.Anchored = false
                 elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
                     local PrayingAnimation = Instance.new("Animation", Folder) PrayingAnimation.Name = "PrayingAnimation" PrayingAnimation.AnimationId = "rbxassetid://3487719500" local Praying = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(PrayingAnimation)
                     function Stop() Lay:Stop() Lean:Stop() Dance1:Stop() Dance2:Stop() Greet:Stop() Praying:Stop() end
                     Praying:play()
-                end
-	    elseif cmd[1] == Prefix.."rage" then
-                if cmd[2] == "." then
-                    loadstring(game:HttpGet("https://pastebin.com/raw/cfQz4sb0"))()
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    loadstring(game:HttpGet("https://pastebin.com/raw/cfQz4sb0"))()
+                    wait(0)
+                    player.Character.HumanoidRootPart.Anchored = true
+                    wait(6.9)
+                    player.Character.HumanoidRootPart.Anchored = false
                 end
             end
         end
