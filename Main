@@ -2,7 +2,7 @@ print("Checking if blacklisted... :)")
 wait(1)
 
 BlackList = {
-0,
+366778121,
 
 
 
