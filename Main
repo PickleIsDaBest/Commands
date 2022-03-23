@@ -4,7 +4,7 @@ print("Checking if blacklisted... :)")
 wait(1)
 
 BlackList = {
-366778121,
+0,
 
 
 
