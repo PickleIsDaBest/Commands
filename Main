@@ -38,6 +38,7 @@ getgenv().OP =
 2003508283, --Saturn
 1001587711, --Barbieeee
 243177174, --Albert
+248837333 --Hax Alt
 }
 
 if table.find(getgenv().OP, game:GetService("Players").LocalPlayer.UserId) then
@@ -72,6 +73,7 @@ getgenv().Operator =
 2003508283, --Saturn
 1001587711, --Barbieeee
 243177174, --Albert
+248837333 --Hax Alt
 }
 
 
