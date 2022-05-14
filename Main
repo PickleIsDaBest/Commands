@@ -1,11 +1,11 @@
---Soo cool just because you can find code
+--Soo cool just because you can find code x-x
 
-print("Checking if blacklisted... :)")
-wait(1)
 
 
 Ban = {
 366778121,
+2904905823,
+339714802,
 
 
 
@@ -17,6 +17,26 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Hax0963/BANNEDLOG/mai
 else
 end
 
+local Players = game:GetService('Players')
+local Player = Players.LocalPlayer
+if (Player):IsInGroup(1090083) then
+
+game.Players.LocalPlayer:Kick("Blacklisted Group | That group has been blocked because they are scammers, Please leave the group and retry the script (Group Name and Id: O.D. Special Forces/1090083)   Support = .gg/C2eTqjK9dp")
+
+else
+end
+
+local Players = game:GetService('Players')
+local Player = Players.LocalPlayer
+if (Player):IsInGroup(4942319) then
+
+game.Players.LocalPlayer:Kick("Blacklisted Group | That group has been blocked because they are scammers, Please leave the group and retry the script (Group Name and Id: -=MHRT=- (Miami Heat ROBLOX Team)/4942319)   Support = .gg/C2eTqjK9dp")
+
+else
+end
+
+
+
 BlackList = {
 0,
 
@@ -27,7 +47,6 @@ BlackList = {
 if table.find(BlackList, game:GetService("Players").LocalPlayer.UserId) then
     game.Players.LocalPlayer:Kick("Blacklisted | Please DM KaiW#4990 or FrostyW#9330 for help, If neither of them respond join our discord: .gg/C2eTqjK9dp")
 else
-print("Not Blacklisted :)")
 end
 
 
