@@ -1,3 +1,12 @@
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Discord";
+        Text = "JOIN NEW DISCORD, OLD ONE GOT DELETED";
+        Duration = 60;
+        Icon = "rbxassetid://7635712200";
+    })
+    
+    setclipboard("https://discord.gg/asnP9ZzmK5")
+
 if game.Players.LocalPlayer.Name == "Hax0963" then
 return
 end
